@@ -1,0 +1,5 @@
+sqlserver:
+  host: db:1433
+  user_name: sa
+  password: Test@2025
+  db_name: task
