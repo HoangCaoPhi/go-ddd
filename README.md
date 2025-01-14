@@ -1,2 +1,6 @@
-# go-ddd
-The project implements DDD in Go
+## Introduction
+
+The project implements Clean Architecture and DDD in Go.
+
+## Getting Started
+

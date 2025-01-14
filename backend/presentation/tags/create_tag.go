@@ -2,8 +2,6 @@ package tags
 
 import (
 	"phihc116/go-task/backend/application/tags"
-	"phihc116/go-task/backend/infrastructure/auth"
-	"phihc116/go-task/backend/infrastructure/persistence/repositories"
 	"phihc116/go-task/backend/shared"
 
 	"github.com/gin-gonic/gin"
@@ -24,9 +22,7 @@ func NewCreateTag(ctx *gin.Context) {
 
 	command := tags.CreateTagCommand(createTagRequest)
 
-	handler := tags.NewCreateTagCommandHandler(
-		repositories.NewTagRepoImpl(),
-		auth.NewIdentity())
+	handler := InitializeCreateTagHandler()
 
 	result := handler.Handler(command)
 
